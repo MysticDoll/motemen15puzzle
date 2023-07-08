@@ -47,15 +47,13 @@ export default class Board extends React.Component {
                             {
                                 m.map((color, index)=> {
                                     const style = {
-                                        height: "128px",
-                                        width: "128px",
                                         background: `#${color}`,
                                         content: " ",
                                         display: "inline-block"
                                     };
                                     const onClick = () => this.swap(index + r * 4);
                                     return (
-                                        <span key={color} style={style} onClick={onClick}/>
+                                        <span className={"motemen-panel"} key={color} style={style} onClick={onClick}/>
                                     )
                                 })
                             }
