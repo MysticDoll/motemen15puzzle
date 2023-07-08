@@ -36,30 +36,31 @@
     transform: rotate(360deg);
   }
 }
-@media screen and (min-width: 256px ) {
-    .motemen-panel {
-        height: 32px;
-        width: 32px;
-    }
-}
 
-@media screen and (min-width: 512px) {
+@media screen and (min-width: 256px ) {
     .motemen-panel {
         height: 64px;
         width: 64px;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 512px) {
     .motemen-panel {
         height: 128px;
         width: 128px;
     }
 }
 
-@media screen and (min-width: 2048px) {
+@media screen and (min-width: 1024px) {
     .motemen-panel {
         height: 256px;
         width: 256px;
+    }
+}
+
+@media screen and (min-width: 2048px) {
+    .motemen-panel {
+        height: 512px;
+        width: 512px;
     }
 }
