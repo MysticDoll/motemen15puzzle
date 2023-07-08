@@ -57,10 +57,3 @@
         width: 256px;
     }
 }
-
-@media screen and (min-width: 2048px) {
-    .motemen-panel {
-        height: 512px;
-        width: 512px;
-    }
-}
