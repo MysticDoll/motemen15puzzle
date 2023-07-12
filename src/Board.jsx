@@ -20,17 +20,19 @@ export default class Board extends React.Component {
 
     swap(n) {
         const w = this.whiteIndex();
-        const sub = Math.abs(w - n);
-        if (sub === 1 || sub === 4) {
-            const motemenArray = this.state.motemenArray.slice();
-            motemenArray[w] = this.state.motemenArray[n];
-            motemenArray[n] = this.state.motemenArray[w];
-            this.setState({
-                motemenArray
-            });
+        if (!((w % 4 === 3 && n - w === 1) || (w % 4 === 0 && w - n === 1))) {
+            const sub = Math.abs(w - n);
+            if (sub === 1 || sub === 4) {
+                const motemenArray = this.state.motemenArray.slice();
+                motemenArray[w] = this.state.motemenArray[n];
+                motemenArray[n] = this.state.motemenArray[w];
+                this.setState({
+                    motemenArray
+                });
 
-            if(JSON.stringify(motemen) === JSON.stringify(motemenArray)) {
-                alert('You know motemen.');
+                if(JSON.stringify(motemen) === JSON.stringify(motemenArray)) {
+                    alert('You know motemen.');
+                }
             }
         }
     }

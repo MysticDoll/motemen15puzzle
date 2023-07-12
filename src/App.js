@@ -9,10 +9,12 @@ const randomize = (motemen) => {
     [-1, 1, 4, -4][Math.floor(Math.random() * 10000) % 4]
   ).forEach(i => {
     const w = m.findIndex(c => c === white);
-    if((w + i) >= 0 && (w + i) < 16) {
-      let wc = m[w];
-      m[w] = m[w + i];
-      m[w + i] = wc;
+    if(((w + i) >= 0) && (w + i) < 16) {
+      if((w % 4 === 3 &&  i !== 1) && (w % 4 === 0 && i !== -1)) {
+        let wc = m[w];
+        m[w] = m[w + i];
+        m[w + i] = wc;
+      }
     }
   });
 
